@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Maker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="ingredients">
+            <div class="chease">
+                <button data-id="1" onclick="removeProduct(event.target)">-</button>
+                <span>CHEASE</span>
+                <button data-id="1" onclick="addProduct(event.target)">+</button>
+            </div>
+            <div class="cabbage" data-id="2">
+                <button data-id="2" onclick="removeProduct(event.target)">-</button>
+                <span>CABBAGE</span>
+                <button data-id="2" onclick="addProduct(event.target)">+</button>
+            </div>
+            <div class="cutlet" data-id="3">
+                <button data-id="3" onclick="removeProduct(event.target)">-</button>
+                <span>CUTLET</span>
+                <button data-id="3" onclick="addProduct(event.target)">+</button>
+            </div>
+
+            <button class="restart-btn" onclick="restartBtn()">RESTART</button>
+
+
+<!-- 
+            <div class="menu">
+                <h1>CART: </h1>
+                <div class="cart-ingredients">
+                    <p> Chease: <input id="chease-value" type="number" disabled value="0"> </p>
+                    <p> Cabbage: <input id="cabbage-value" type="number" disabled value="0"> </p>
+                    <p> Cutlet: <input id="cutlet-value" type="number" disabled value="0"> </p>
+                </div>
+            </div> -->
+        </div>
+        
+        <div class="burger-container">
+            <div class="burger">
+                <div id="top-bun" style="height:80px; width:200px; background-color:peru; border-top-right-radius:80px; border-top-left-radius:80px; margin-bottom: 2px;"></div>
+                <div class="burger-add">
+                </div>
+                <div id="bottom-bun" style="height:30px; width:200px; background-color:peru; border-bottom-right-radius:20px; border-bottom-left-radius:20px;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

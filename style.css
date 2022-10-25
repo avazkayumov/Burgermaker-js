@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 450px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .container .ingredients {
+        padding: 0;
+        padding-top: 50px;
+    }
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.ingredients div {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+.ingredients div button {
+  padding: 10px 20px;
+  background-color: rgb(233, 194, 105);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+  user-select: none;
+}
+
+.ingredients div span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.burger-container {
+  background-color: rgb(233, 194, 105);
+  position: relative;
+  overflow: scroll;
+}
+
+.burger {
+  padding-top: 70px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.added-chease {
+  margin-bottom: 2px;
+  height: 10px;
+  width: 200px;
+  background-color: yellow;
+}
+
+.added-cabbage {
+  height: 10px;
+  width: 200px;
+  background-color: green;
+  margin-bottom: 2px;
+}
+
+.added-cutlet {
+  height: 15px;
+  width: 200px;
+  background-color: brown;
+  margin-bottom: 2px;
+}
+
+.menu {
+    position: absolute;
+    bottom: 50px;
+    background-color: rgb(245, 170, 170);
+    display: flex;
+    flex-direction: column;  
+}
+
+.cart-ingredients {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-ingredients input {
+    background-color: transparent;
+    border: none;
+}
+
+.cart-ingredients p {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.restart-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: rgb(177, 153, 97);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+}
